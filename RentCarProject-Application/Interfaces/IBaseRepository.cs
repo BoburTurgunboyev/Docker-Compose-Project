@@ -10,11 +10,13 @@ namespace RentCarProject_Application.Interfaces
     {
         public ValueTask<bool> CreateAsync(Entity entity);
 
-        public ValueTask<bool> UpdateAsync(long id, Entity entity);
+        public ValueTask<bool> UpdateAsync(int id, Entity entity);
 
         public ValueTask<bool> DeleteAsync(int id);
 
         public ValueTask<IList<Entity>> GetAllAsync();
+
+        public ValueTask<Entity> GetByIdAsync(int id); 
 
        
     }
