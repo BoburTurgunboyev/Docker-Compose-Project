@@ -13,8 +13,12 @@ builder.Services.AddDbContext<RentCarDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddScoped<IRenterRepository, RenterRepository>();
 builder.Services.AddScoped<ICarRepository, CarRepository>();
-builder.Services.AddScoped<ICarService,CarService>();
+builder.Services.AddScoped<ILessorRepository, LessorRepository>();
+builder.Services.AddScoped<IRenterService, RenterService>();
+builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<ILessorService, LessorService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
