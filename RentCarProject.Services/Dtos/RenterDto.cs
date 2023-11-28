@@ -8,7 +8,7 @@ namespace RentCarProject.Services.Dtos
 {
     public class RenterDto
     {
-        public int Id { get; set; }
+        
         public string Name { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
