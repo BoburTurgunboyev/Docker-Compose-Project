@@ -1,29 +1,59 @@
 ﻿using RentCarProject.Domain.Entities.Models;
 using RentCarProject.Services.Dtos;
 using RentCarProject.Services.Interfaces;
+using RentCarProject_Application.Interfaces;
+using RentCarProject_Application.Repositories;
 
 namespace RentCarProject.Services.Services
 {
     public class LessorService : ILessorService
     {
-        public ValueTask<bool> CreateAsync(LessorDto entity)
+        private readonly ILessorRepository _lessorRepository;
+
+        public LessorService(ILessorRepository lessorRepository)
         {
-            throw new NotImplementedException();
+            _lessorRepository = lessorRepository;
+        }
+        public async ValueTask<bool> CreateAsync(LessorDto entity)
+        {
+            Lessor lessor = new Lessor()
+            {
+               
+                Name = entity.Name
+
+            };
+
+            var res = await _lessorRepository.CreateAsync(lessor);
+            return res;
         }
 
-        public ValueTask<bool> DeleteAsync(int id)
+        public async ValueTask<bool> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var les = await _lessorRepository.DeleteAsync(id);
+            return les;
         }
 
-        public ValueTask<IList<Lessor>> GetAllAsync()
+        public async ValueTask<IList<Lessor>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _lessorRepository.GetAllAsync();
         }
 
-        public ValueTask<bool> UpdateAsync(long id, LessorDto dto)
+        public async ValueTask<Lessor> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var res = await _lessorRepository.GetByIdAsync(id);
+            return res;
+        }
+
+        public async ValueTask<bool> UpdateAsync(int id, LessorDto dto)
+        {
+            var res1 = await _lessorRepository.GetByIdAsync(id);
+
+            res1.Name = dto.Name;
+
+            var result = await _lessorRepository.UpdateAsync(id, res1);
+            return result;
+                
+
         }
     }
 }
