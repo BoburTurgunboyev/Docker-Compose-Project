@@ -44,11 +44,19 @@ namespace RentCarProject_Application.Repositories
             return await _rentCarDB.renter.ToListAsync();
         }
 
-        public async ValueTask<bool> UpdateAsync(long id, Renter entity)
+        public async ValueTask<Renter> GetByIdAsync(int id)
+        {
+            var res = await _rentCarDB.renter.FirstOrDefaultAsync(x => x.Id == id);
+            return res;
+        }
+
+        public async ValueTask<bool> UpdateAsync(int id, Renter entity)
         {
             _rentCarDB.renter.Update(entity);
             var res = await _rentCarDB.SaveChangesAsync();
             return res > 0;
         }
+
+      
     }
 }
