@@ -7,13 +7,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2F26BFAE-2B7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RentCarProject", "RentCarProject", "{A283031F-957A-4C76-8119-B15CAC06F0C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCarProject.Api", "RentCarProject.Api\RentCarProject.Api.csproj", "{FA1D6F4A-2C53-4D01-9ACF-D06C9E7195C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentCarProject.Api", "RentCarProject.Api\RentCarProject.Api.csproj", "{FA1D6F4A-2C53-4D01-9ACF-D06C9E7195C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCarProject.Domain", "RentCarProject.Domain\RentCarProject.Domain.csproj", "{146FADBF-1C42-4D02-8FBB-BEBD7A5A1C31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentCarProject.Domain", "RentCarProject.Domain\RentCarProject.Domain.csproj", "{146FADBF-1C42-4D02-8FBB-BEBD7A5A1C31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCarProject-Application", "RentCarProject-Application\RentCarProject-Application.csproj", "{7393D285-71C6-4CCB-93A1-F5F3F48C4C7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentCarProject-Application", "RentCarProject-Application\RentCarProject-Application.csproj", "{7393D285-71C6-4CCB-93A1-F5F3F48C4C7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCarProject.Services", "RentCarProject.Services\RentCarProject.Services.csproj", "{B6C9A8A7-5D43-4281-A50D-D5B82F41ACCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentCarProject.Services", "RentCarProject.Services\RentCarProject.Services.csproj", "{B6C9A8A7-5D43-4281-A50D-D5B82F41ACCE}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{48F070B1-8782-47DA-9BC3-5A76796B2E2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{B6C9A8A7-5D43-4281-A50D-D5B82F41ACCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6C9A8A7-5D43-4281-A50D-D5B82F41ACCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6C9A8A7-5D43-4281-A50D-D5B82F41ACCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48F070B1-8782-47DA-9BC3-5A76796B2E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F070B1-8782-47DA-9BC3-5A76796B2E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F070B1-8782-47DA-9BC3-5A76796B2E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F070B1-8782-47DA-9BC3-5A76796B2E2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
