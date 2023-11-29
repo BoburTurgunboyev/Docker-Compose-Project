@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  rentcarproject.api:
+    image: ${DOCKER_REGISTRY-}rentcarprojectapi
+    build:
+      context: .
+      dockerfile: RentCarProject.Api/Dockerfile
